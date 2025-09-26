@@ -45,6 +45,7 @@
         android:textSize="25sp"
         android:background="@color/color1"
         android:textColor="@color/black"
+        android:id="@+id/questionTV"
         />
     <TextView
         android:layout_width="match_parent"
@@ -94,12 +95,12 @@
         android:text="DONE"
         android:textSize="25dp"
         android:id="@+id/doneBTN"
-        android:background="@color/color2"
+        android:background="@color/color3"
         />
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="75sp"
+        android:layout_height="30sp"
         />
     <Button
         android:layout_width="wrap_content"
@@ -107,8 +108,10 @@
         android:gravity="center"
         android:layout_gravity="end"
         android:text="NEXT"
-        android:background="@color/color2"
+        android:textColor="@color/black"
         android:id="@+id/nextBTN"
+
+        android:backgroundTint="@color/color3"
         />
 
 
