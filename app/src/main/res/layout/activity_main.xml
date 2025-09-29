@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="top"
-    android:background="@color/color2"
+
 
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -14,10 +14,14 @@
         android:layout_height="wrap_content"
 
         android:gravity="center"
-        android:text="Finish The Lyric!"
+        android:text="@string/app_name"
         android:textSize="60sp"
         android:textStyle="italic"
-        android:background="@color/color1"
+        android:shadowColor="@color/white"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="10"
+
         android:textColor="@color/black"
         />
 
@@ -27,14 +31,14 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Capitalization Matters!!!"
-        android:background="@color/color1"
+
         android:textColor="@color/red"
         />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="50sp"
-        android:foreground="@color/color1"
+
         />
 
     <TextView
@@ -43,7 +47,11 @@
         android:gravity="center"
         android:text="'I want you to me mine again baby'"
         android:textSize="25sp"
-        android:background="@color/color1"
+        android:shadowColor="@color/white"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="10"
+
         android:textColor="@color/black"
         android:id="@+id/questionTV"
         />
@@ -54,13 +62,13 @@
         android:textSize="50sp"
         android:gravity="center"
         android:textColor="@color/black"
-        android:background="@color/color1"
+
         android:id="@+id/answerMessage"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/color1"
+
         android:text=""
         android:gravity="center"
         android:layout_gravity="center"
@@ -71,7 +79,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="125sp"
-        android:background="@color/color1"
+
         />
 
 
@@ -79,7 +87,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:hint="ENTER TEXT HERE"
+        android:hint="@string/enter_text_hint"
         android:textSize="30sp"
         android:id="@+id/enterTEXT"
         android:textColor="@color/black"
@@ -92,10 +100,12 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_gravity="center"
-        android:text="DONE"
+        android:text="@string/done_button"
         android:textSize="25dp"
         android:id="@+id/doneBTN"
-        android:background="@color/color3"
+        android:backgroundTint="@color/red"
+        style="@style/SquareButton"
+        android:textColor="@color/white"
         />
 
     <View
@@ -107,11 +117,13 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_gravity="end"
-        android:text="NEXT"
-        android:textColor="@color/black"
+        android:text="@string/next_button"
+        android:textColor="@color/white"
         android:id="@+id/nextBTN"
+        style="@style/SquareButton"
+        android:backgroundTint="@color/red"
 
-        android:backgroundTint="@color/color3"
+
         />
 
 
