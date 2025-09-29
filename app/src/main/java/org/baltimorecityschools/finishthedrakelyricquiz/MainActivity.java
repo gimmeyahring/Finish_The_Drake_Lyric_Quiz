@@ -102,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
+                    enterText.setText(R.string.enter_text_hint);
                     answerMessage.setText("");
                     currentIndex++;
                     currentQuestion = questions[currentIndex];
