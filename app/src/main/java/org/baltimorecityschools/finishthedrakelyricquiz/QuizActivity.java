@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity3 extends AppCompatActivity {
+public class QuizActivity extends AppCompatActivity {
 
 
     // declare questions
@@ -44,7 +44,7 @@ public class MainActivity3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_quiz);
         questionTV = (TextView) findViewById(R.id.questionTV);
         answerMessage = (TextView) findViewById(R.id.answerMessage);
         enterText = (EditText) findViewById(R.id.enterTEXT);
@@ -55,7 +55,7 @@ public class MainActivity3 extends AppCompatActivity {
         q0 = new Question("I want you to be mine again baby", "I know my lifestyle is driving you crazy");
         q1 = new Question("Asking me how did it feel", "Cant say it didnt surprise me");
         q2 = new Question("And we can hear the angels callin us", "And we can see the sunrise before us");
-        q3 = new Question("Always been a lil mathematician", "Lately this cash im gettin");
+        q3 = new Question("Always been a lil mathematician", "Lately this cash Im gettin");
         q4 = new Question("Put the money in the bag", "Oops I just got a bag");
         q5 = new Question("OT OT theres never much love when we go OT", "I pray we make it back in one piece");
         q6 = new Question("I got chrome on my body", "Im the man of steel");
@@ -77,7 +77,7 @@ public class MainActivity3 extends AppCompatActivity {
 
                     score++;
                     answerMessage.setText("GOOD JOB! You Got It Right!");
-                    Toast.makeText(MainActivity3.this, "You got it right!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(QuizActivity.this, "You got it right!", Toast.LENGTH_LONG).show();
                 }
                 else {
 
@@ -94,13 +94,13 @@ public class MainActivity3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(currentIndex == 9) {
-                    Intent leaveIntent = new Intent(MainActivity3.this, MainActivity2.class);
+                    Intent leaveIntent = new Intent(QuizActivity.this, ScoreActivity.class);
                     leaveIntent.putExtra("score", score);
                     startActivity(leaveIntent);
                 }
                 else
                 {
-                    enterText.setText(R.string.enter_text_hint);
+                    enterText.setText("");
                     answerMessage.setText("");
                     currentIndex++;
                     currentQuestion = questions[currentIndex];

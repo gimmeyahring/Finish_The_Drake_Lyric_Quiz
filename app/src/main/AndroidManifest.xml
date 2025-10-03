@@ -12,10 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinishTheDrakeLyricQuiz">
         <activity
-            android:name=".MainActivity2"
+            android:name=".ScoreActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".QuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
