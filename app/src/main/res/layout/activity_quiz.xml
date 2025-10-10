@@ -41,20 +41,46 @@
 
         />
 
-    <TextView
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="'I want you to me mine again baby'"
-        android:textSize="25sp"
-        android:shadowColor="@color/white"
-        android:shadowDx="0.0"
-        android:shadowDy="0.0"
-        android:shadowRadius="5"
+        android:orientation="horizontal"
+        android:gravity="center">
 
-        android:textColor="@color/black"
-        android:id="@+id/questionTV"
-        />
+        <LinearLayout
+            android:layout_width="35dp"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="yeet"
+                android:src="@drawable/hintnotused2"
+                android:id="@+id/hintButton"
+
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="'I want you to me mine again baby'"
+            android:textSize="25sp"
+            android:shadowColor="@color/white"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="5"
+
+            android:textColor="@color/black"
+            android:id="@+id/questionTV"
+            />
+
+    </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

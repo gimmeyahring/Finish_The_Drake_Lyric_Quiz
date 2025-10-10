@@ -1,9 +1,11 @@
 package org.baltimorecityschools.finishthedrakelyricquiz;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -29,6 +31,7 @@ public class QuizActivity extends AppCompatActivity {
 
 
 
+
     TextView answerMessage;
     TextView questionTV;
     EditText enterText;
@@ -41,6 +44,7 @@ public class QuizActivity extends AppCompatActivity {
     String currentAnswer = "";
     String userAnswer = "";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,25 +56,34 @@ public class QuizActivity extends AppCompatActivity {
         nextBTN = (Button) findViewById(R.id.nextBTN);
         score = 0;
         currentIndex = 0;
-        q0 = new Question("I want you to be mine again baby", "I know my lifestyle is driving you crazy");
-        q1 = new Question("Asking me how did it feel", "Cant say it didnt surprise me");
-        q2 = new Question("And we can hear the angels callin us", "And we can see the sunrise before us");
-        q3 = new Question("Always been a lil mathematician", "Lately this cash Im gettin");
-        q4 = new Question("Put the money in the bag", "Oops I just got a bag");
-        q5 = new Question("OT OT theres never much love when we go OT", "I pray we make it back in one piece");
-        q6 = new Question("I got chrome on my body", "Im the man of steel");
-        q7 = new Question("And Im back on my grind", "A psychic read my life line");
-        q8 = new Question("How many faking they streams", "Getting they plays from machines");
-        q9 = new Question("Darling hold my hand", "Nothing beats a jet 2 holiday");
+        q0 = new Question("I want you to be mine again baby", "I know my lifestyle is driving you crazy", "fettywapagian");
+        q1 = new Question("Asking me how did it feel", "Cant say it didnt surprise me", "drakewhatdidimiss");
+        q2 = new Question("And we can hear the angels callin us", "And we can see the sunrise before us", "lilwaynemrs.officer");
+        q3 = new Question("Always been a lil mathematician", "Lately this cash Im gettin", "lildurkallmylife");
+        q4 = new Question("Put the money in the bag", "Oops I just got a bag", "yunomilesptmib");
+        q5 = new Question("OT OT theres never much love when we go OT", "I pray we make it back in one piece", "drakeonedance");
+        q6 = new Question("I got chrome on my body", "Im the man of steel", "pmbmanofsteel");
+        q7 = new Question("And Im back on my grind", "A psychic read my life line", "kanyewestiwonder");
+        q8 = new Question("How many faking they streams", "Getting they plays from machines", "21savagealot");
+        q9 = new Question("Darling hold my hand", "Nothing beats a jet 2 holiday", "holdmyhand");
         questions = new Question[]{q0, q1, q2, q3, q4, q5, q6, q7, q8, q9};
         currentQuestion = questions[currentIndex];
+
+
+
+
+
+
+
 
 
         doneBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 userAnswer = enterText.getText().toString();
                 currentAnswer = currentQuestion.getCorrectAnswer();
+
 
 
                 if (userAnswer.equals(currentAnswer)){
