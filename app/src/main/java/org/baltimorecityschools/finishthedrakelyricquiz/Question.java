@@ -7,32 +7,39 @@ public class Question {
 
     public String questionText;
     public String correctAnswer;
-    public String songName;
+    public int songNumber;
+
 
     // constructors
 
     public Question(){
         questionText = "";
         correctAnswer = "";
-        songName = "";
+        songNumber = 0;
+
+
 
     }
 
-    public Question(String qtf, String caf, String snf){
+    public Question(String qtf, String caf, int snf){
         questionText = qtf;
         correctAnswer = caf;
-        songName = snf;
+        songNumber = snf;
+
+
+
     }
 
     // getters & setters
 
     public String getQuestionText(){return questionText;}
     public String getCorrectAnswer(){return correctAnswer;}
-    public String getSongName(){return songName;}
+    public int getSongNumber(){return songNumber;}
+
 
     public void setQuestionText(String newQuestionText){questionText = newQuestionText;}
     public void setCorrectAnswer(String newCorrectAnswer){correctAnswer = newCorrectAnswer;}
-    public void setSongName(String newSongName){songName = newSongName;}
+    public void setSongNumber(int newSongNumber){songNumber = newSongNumber;}
 
     // methods
 
@@ -40,6 +47,6 @@ public class Question {
     @NonNull
     @Override
     public String toString() {
-        return "This question is '" + questionText + "'. The answer is '" + correctAnswer + ". This song is called " + songName + ".";
+        return "This question is '" + questionText + "'. The answer is '" + correctAnswer + ". This song's number is " + songNumber + ".";
     }
 }

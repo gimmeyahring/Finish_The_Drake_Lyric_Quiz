@@ -5,6 +5,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.EditText;
@@ -37,12 +38,18 @@ public class QuizActivity extends AppCompatActivity {
     EditText enterText;
     Button doneBTN;
     Button nextBTN;
+    ImageButton hintBTN;
+    public int[] hintAudio = {R.raw.fettywapagain, R.raw.drakewhatdidimiss, R.raw.lilwaynmrsofficer,
+            R.raw.lildurkallmylife, R.raw.yunomilesputthemoneyinthebag, R.raw.drakeonedance,
+            R.raw.pbmmanofsteel, R.raw.kanywestiwonder, R.raw.savagealot, R.raw.laufeyfromthestart };
+    MediaPlayer mediaPlayer1;
 
     int score;
     int currentIndex;
     Question currentQuestion;
     String currentAnswer = "";
     String userAnswer = "";
+    int currentSongNumber = 0;
 
 
     @Override
@@ -54,35 +61,47 @@ public class QuizActivity extends AppCompatActivity {
         enterText = (EditText) findViewById(R.id.enterTEXT);
         doneBTN = (Button) findViewById(R.id.doneBTN);
         nextBTN = (Button) findViewById(R.id.nextBTN);
+        hintBTN = (ImageButton) findViewById(R.id.hintButton);
         score = 0;
         currentIndex = 0;
-        q0 = new Question("I want you to be mine again baby", "I know my lifestyle is driving you crazy", "fettywapagian");
-        q1 = new Question("Asking me how did it feel", "Cant say it didnt surprise me", "drakewhatdidimiss");
-        q2 = new Question("And we can hear the angels callin us", "And we can see the sunrise before us", "lilwaynemrs.officer");
-        q3 = new Question("Always been a lil mathematician", "Lately this cash Im gettin", "lildurkallmylife");
-        q4 = new Question("Put the money in the bag", "Oops I just got a bag", "yunomilesptmib");
-        q5 = new Question("OT OT theres never much love when we go OT", "I pray we make it back in one piece", "drakeonedance");
-        q6 = new Question("I got chrome on my body", "Im the man of steel", "pmbmanofsteel");
-        q7 = new Question("And Im back on my grind", "A psychic read my life line", "kanyewestiwonder");
-        q8 = new Question("How many faking they streams", "Getting they plays from machines", "21savagealot");
-        q9 = new Question("Darling hold my hand", "Nothing beats a jet 2 holiday", "holdmyhand");
+        q0 = new Question("I want you to be mine again baby", "I know my lifestyle is " +
+                "driving you crazy", 0);
+        q1 = new Question("Asking me how did it feel", "Cant say it didnt surprise me", 1);
+        q2 = new Question("And we can hear the angels callin us", "And we can see the " +
+                "sunrise before us", 2);
+        q3 = new Question("Always been a lil mathematician", "Lately this cash Im gettin", 3);
+        q4 = new Question("Put the money in the bag", "Oops I just got a bag", 4);
+        q5 = new Question("OT OT theres never much love when we go OT", "I pray we make it " +
+                "back in one piece", 5);
+        q6 = new Question("I got chrome on my body", "Im the man of steel", 6);
+        q7 = new Question("And Im back on my grind", "A psychic read my life line", 7);
+        q8 = new Question("How many faking they streams", "Getting they plays from machines", 8);
+        q9 = new Question("Dont you notice how I get quiet when theres no one else around"
+                , "Me and you and akward silence", 9);
         questions = new Question[]{q0, q1, q2, q3, q4, q5, q6, q7, q8, q9};
         currentQuestion = questions[currentIndex];
 
+        hintBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                currentSongNumber = currentQuestion.getSongNumber();
+                mediaPlayer1 = MediaPlayer.create(QuizActivity.this, hintAudio[currentSongNumber]);
+                mediaPlayer1.start();
 
 
 
-
-
-
-
+            }
+        });
 
         doneBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mediaPlayer1.stop();
 
                 userAnswer = enterText.getText().toString();
                 currentAnswer = currentQuestion.getCorrectAnswer();
+
+
 
 
 
