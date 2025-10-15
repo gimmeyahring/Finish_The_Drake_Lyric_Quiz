@@ -39,17 +39,15 @@ public class QuizActivity extends AppCompatActivity {
     Button doneBTN;
     Button nextBTN;
     ImageButton hintBTN;
-    public int[] hintAudio = {R.raw.fettywapagain, R.raw.drakewhatdidimiss, R.raw.lilwaynmrsofficer,
-            R.raw.lildurkallmylife, R.raw.yunomilesputthemoneyinthebag, R.raw.drakeonedance,
-            R.raw.pbmmanofsteel, R.raw.kanywestiwonder, R.raw.savagealot, R.raw.laufeyfromthestart };
     MediaPlayer mediaPlayer1;
 
     int score;
     int currentIndex;
     Question currentQuestion;
+    int currentSongIndex;
     String currentAnswer = "";
     String userAnswer = "";
-    int currentSongNumber = 0;
+
 
 
     @Override
@@ -62,14 +60,17 @@ public class QuizActivity extends AppCompatActivity {
         doneBTN = (Button) findViewById(R.id.doneBTN);
         nextBTN = (Button) findViewById(R.id.nextBTN);
         hintBTN = (ImageButton) findViewById(R.id.hintButton);
+        int[] hintAudio = {R.raw.fettywapagain, R.raw.drakewhatdidimiss, R.raw.lilwaynmrsofficer,
+                R.raw.lildurkallmylife, R.raw.yunomilesputthemoneyinthebag, R.raw.drakeonedance,
+                R.raw.pbmmanofsteel, R.raw.kanywestiwonder, R.raw.savagealot, R.raw.laufeyfromthestart };
         score = 0;
         currentIndex = 0;
         q0 = new Question("I want you to be mine again baby", "I know my lifestyle is " +
                 "driving you crazy", 0);
         q1 = new Question("Asking me how did it feel", "Cant say it didnt surprise me", 1);
-        q2 = new Question("And we can hear the angels callin us", "And we can see the " +
+        q2 = new Question("And we can hear the angels calling us", "And we can see the " +
                 "sunrise before us", 2);
-        q3 = new Question("Always been a lil mathematician", "Lately this cash Im gettin", 3);
+        q3 = new Question("Always been a lil mathematician", "Lately this cash Im getting", 3);
         q4 = new Question("Put the money in the bag", "Oops I just got a bag", 4);
         q5 = new Question("OT OT theres never much love when we go OT", "I pray we make it " +
                 "back in one piece", 5);
@@ -81,13 +82,18 @@ public class QuizActivity extends AppCompatActivity {
         questions = new Question[]{q0, q1, q2, q3, q4, q5, q6, q7, q8, q9};
         currentQuestion = questions[currentIndex];
 
+
+
+
+
+
+
         hintBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                currentSongNumber = currentQuestion.getSongNumber();
-                mediaPlayer1 = MediaPlayer.create(QuizActivity.this, hintAudio[currentSongNumber]);
+                currentSongIndex = currentQuestion.getSongNumber();
+                mediaPlayer1 = MediaPlayer.create(QuizActivity.this, hintAudio[currentSongIndex]);
                 mediaPlayer1.start();
-
 
 
             }
@@ -96,7 +102,7 @@ public class QuizActivity extends AppCompatActivity {
         doneBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mediaPlayer1.stop();
+
 
                 userAnswer = enterText.getText().toString();
                 currentAnswer = currentQuestion.getCorrectAnswer();
@@ -125,13 +131,18 @@ public class QuizActivity extends AppCompatActivity {
         nextBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if(currentIndex == 9) {
+
                     Intent leaveIntent = new Intent(QuizActivity.this, ScoreActivity.class);
                     leaveIntent.putExtra("score", score);
                     startActivity(leaveIntent);
                 }
                 else
                 {
+
+
+
                     enterText.setText("");
                     answerMessage.setText("");
                     currentIndex++;

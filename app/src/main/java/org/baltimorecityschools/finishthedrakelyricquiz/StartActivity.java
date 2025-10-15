@@ -17,11 +17,13 @@ public class StartActivity extends AppCompatActivity {
     public int number = 0;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         startBTN = findViewById(R.id.startButton);
+
 
         startBTN.setOnClickListener(new View.OnClickListener() {
             @Override
