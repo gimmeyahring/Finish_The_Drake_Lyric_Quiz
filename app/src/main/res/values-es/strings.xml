@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quizl!</string>
+    <string name="enter_text_hint">INTRODUZCA EL TEXTO AQUÍ</string>
+    <string name="done_button">HECHO</string>
+    <string name="next_button">PROXIMO</string>
+    <string name="start_button">COMENZAR</string>
+    <string name="capitalize_text">¡LA MAYÚSCULAS IMPORTA!</string>
+    <string name="first_lyric">\'I want you to me mine again baby\'</string>
+    <string name="score">" PUNTAJE"</string>
+    <string name="default_score">0</string>
+    <string name="email">" CORREO ELECTRÓNICO"</string>
+</resources>

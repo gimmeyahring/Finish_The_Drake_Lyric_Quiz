@@ -114,12 +114,11 @@ public class QuizActivity extends AppCompatActivity {
                 if (userAnswer.equals(currentAnswer)){
 
                     score++;
-                    answerMessage.setText("GOOD JOB! You Got It Right!");
                     Toast.makeText(QuizActivity.this, "You got it right!", Toast.LENGTH_LONG).show();
                 }
                 else {
 
-                    answerMessage.setText("OH NO... You Got It Wrong!");
+                    Toast.makeText(QuizActivity.this,"You got it wrong...", Toast.LENGTH_LONG).show();
                 }
 
 
