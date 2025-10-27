@@ -28,7 +28,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="EMAIL"
+        android:text="@string/email"
         android:textSize="30sp"
         android:backgroundTint="@color/black"
         style="@style/SquareButton"

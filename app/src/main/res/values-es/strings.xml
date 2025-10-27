@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Quizl!</string>
+    <string name="app_name">Adivina la letra</string>
     <string name="enter_text_hint">INTRODUZCA EL TEXTO AQUÍ</string>
     <string name="done_button">HECHO</string>
     <string name="next_button">PROXIMO</string>
