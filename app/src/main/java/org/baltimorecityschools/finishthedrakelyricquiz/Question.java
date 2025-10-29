@@ -47,6 +47,7 @@ public class Question {
     @NonNull
     @Override
     public String toString() {
-        return "This question is '" + questionText + "'. The answer is '" + correctAnswer + ". This song's number is " + songNumber + ".";
+        return "This question is '" + questionText + "'. The answer is '" + correctAnswer +
+                ". This song's number is " + songNumber + ".";
     }
 }

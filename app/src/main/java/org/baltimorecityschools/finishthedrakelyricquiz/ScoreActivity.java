@@ -28,7 +28,8 @@ public class ScoreActivity extends AppCompatActivity {
         emailBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                composeEmail("I scored a " + score + "in the 'Finish The Lyric' app", "Finish The Lyric App Score");
+                composeEmail("I scored a " + score + "in the 'Finish The Lyric' app",
+                        "Finish The Lyric App Score");
             }
         });
 
