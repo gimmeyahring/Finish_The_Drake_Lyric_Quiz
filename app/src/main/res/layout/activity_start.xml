@@ -24,7 +24,20 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="350sp"
+        android:layout_height="250sp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="ENTER A USERNAME"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:id="@+id/usernameET"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="75sp"
         />
 
     <Button
