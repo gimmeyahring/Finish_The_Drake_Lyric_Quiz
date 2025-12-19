@@ -28,6 +28,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.QuizlGYRApp" >
         <activity
+            android:name="org.baltimorecityschools.quizlgyrapp.QuizSelectActivity"
+            android:exported="false" />
+        <activity
             android:name="org.baltimorecityschools.quizlgyrapp.MainActivity"
             android:exported="true" >
             <intent-filter>
