@@ -1,0 +1,21 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable quizllogo1
+id donebut
+id setUsername
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string done
+string enter_a_username
+style Base.Theme.QuizlGYRApp
+style SquareButton
+style Theme.QuizlGYRApp
+xml backup_rules
+xml data_extraction_rules
