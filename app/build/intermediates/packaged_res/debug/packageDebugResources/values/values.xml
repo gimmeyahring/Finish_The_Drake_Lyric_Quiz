@@ -2,6 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="purple">#4400AA</color>
+    <color name="purple2">#5C39A4</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">QuizlGYRApp</string>
     <string name="done">DONE</string>

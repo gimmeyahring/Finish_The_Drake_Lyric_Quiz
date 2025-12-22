@@ -2,12 +2,13 @@ R_DEF: Internal format may change without notice
 local
 color black
 color purple
+color purple2
 color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable quizllogo1
+drawable usernamepic
 id donebut
-id sandwichbut
 id setUsername
 id usernametext
 id usernametextview

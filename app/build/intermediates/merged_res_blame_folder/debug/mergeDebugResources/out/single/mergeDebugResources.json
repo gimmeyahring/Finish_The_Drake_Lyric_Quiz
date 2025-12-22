@@ -36,8 +36,16 @@
         "source": "C:\\Users\\1155381\\.gradle\\daemon\\8.13\\org.baltimorecityschools.quizlgyrapp-main-38:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\1155381\\.gradle\\daemon\\8.13\\org.baltimorecityschools.quizlgyrapp-debug-36:\\drawable_usernamepic.png.flat",
+        "source": "C:\\Users\\1155381\\.gradle\\daemon\\8.13\\org.baltimorecityschools.quizlgyrapp-main-38:\\drawable\\usernamepic.png"
+    },
+    {
         "merged": "C:\\Users\\1155381\\.gradle\\daemon\\8.13\\org.baltimorecityschools.quizlgyrapp-debug-36:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\1155381\\.gradle\\daemon\\8.13\\org.baltimorecityschools.quizlgyrapp-main-38:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\1155381\\.gradle\\daemon\\8.13\\org.baltimorecityschools.quizlgyrapp-debug-36:\\layout_activity_quiz_select.xml.flat",
+        "source": "C:\\Users\\1155381\\.gradle\\daemon\\8.13\\org.baltimorecityschools.quizlgyrapp-main-38:\\layout\\activity_quiz_select.xml"
     },
     {
         "merged": "C:\\Users\\1155381\\.gradle\\daemon\\8.13\\org.baltimorecityschools.quizlgyrapp-debug-36:\\mipmap-anydpi_ic_launcher_round.xml.flat",
@@ -50,10 +58,6 @@
     {
         "merged": "C:\\Users\\1155381\\.gradle\\daemon\\8.13\\org.baltimorecityschools.quizlgyrapp-debug-36:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\1155381\\.gradle\\daemon\\8.13\\org.baltimorecityschools.quizlgyrapp-main-38:\\drawable\\ic_launcher_background.xml"
-    },
-    {
-        "merged": "org.baltimorecityschools.quizlgyrapp-debug-36:/layout_activity_main.xml.flat",
-        "source": "org.baltimorecityschools.quizlgyrapp-main-38:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\1155381\\.gradle\\daemon\\8.13\\org.baltimorecityschools.quizlgyrapp-debug-36:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
