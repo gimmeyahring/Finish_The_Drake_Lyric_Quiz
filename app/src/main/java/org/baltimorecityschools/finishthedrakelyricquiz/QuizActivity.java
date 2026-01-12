@@ -81,8 +81,8 @@ public class QuizActivity extends AppCompatActivity {
         score = 0;
         currentIndex = 0;
         q0 = new Question("I want you to be mine again baby", 0, 0,"I know my lifestyle is driving you crazy", "I know the distance is driving you crazy", "I cannot see myself without you", "I know these wild nights is driving you crazy");
-        q1 = new Question("Asking me how did it feel", 3, 1, "Won't pretend it didn't cut deep", "Won't say it didn't enlighten me", "Won't say it didn't scare me", "Look at the levels I’m reachin’");
-        q2 = new Question("And we can hear the angels calling us", 3, 2, "And when im in that thang", "Doing a cuk in my latest drop", "And we can feel the magic between us", "And we can see the sunrise before us");
+        q1 = new Question("Asking me how did it feel", 3, 1, "Won't pretend it didn't cut deep", "Won't say it didn't enlighten me", "Won't say it didn't scare me", "Can't say it didn't suprise me");
+        q2 = new Question("And we can hear the angels calling us", 3, 2, "And when im in that thang", "Doing a buck in my latest drop", "And we can feel the magic between us", "And we can see the sunrise before us");
         q3 = new Question("Always been a lil mathematician", 1, 3, "Lately this bag I'm gettin'", "Lately this cash I'm gettin'", "Got me losin' count of this bag", "Look at the level I’m reachin’");
         q4 = new Question("Put the money in the bag", 2, 4, "Oops I just got them racks", "She said you not funny son", "Oops I just got a bag", "This the sound of a bag");
         q5 = new Question("OT OT theres never much love when we go OT", 0, 5, "I pray to make it back in one piece", "I pray, I pray", "That's why I need a one dance", "Got a Hennessy in my hand");
@@ -166,6 +166,7 @@ public class QuizActivity extends AppCompatActivity {
                     radioOption1.setText(currentQuestion.getOption2());
                     radioOption2.setText(currentQuestion.getOption3());
                     radioOption3.setText(currentQuestion.getOption4());
+                    doneBTN.setVisibility(View.VISIBLE);
                 }
 
             }

@@ -39,6 +39,7 @@ public class Question {
         option1 = o1;
         option2 = o2;
         option3 = o3;
+        option4 = o4;
 
 
 
