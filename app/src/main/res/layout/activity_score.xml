@@ -5,7 +5,7 @@
     android:orientation="vertical"
 
     android:gravity="center"
-    android:background="@color/red"
+    android:background="@color/purple2"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <TextView
@@ -33,6 +33,16 @@
         android:backgroundTint="@color/black"
         style="@style/SquareButton"
         android:id="@+id/emailButton"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LEADERBOARD"
+        android:textSize="30sp"
+        android:backgroundTint="@color/black"
+        style="@style/SquareButton"
+        android:id="@+id/leaderboardButton"
 
         />
 
