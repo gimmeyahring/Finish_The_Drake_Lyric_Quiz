@@ -58,7 +58,8 @@ public class StartActivity extends AppCompatActivity {
         else {
             enterUsername.setVisibility(View.GONE);
             username = openPreference.getString(USERNAME_KEY, "User");
-            usernameTV.setText("Welcome back " + username);
+            usernameTV.setText(getString(R.string.welcome_backbut) + username);
+            doneBTN.setText("@string/start_button");
             usernameTV.setVisibility(View.VISIBLE);
             doneBTN.setText("START");
 

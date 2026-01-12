@@ -11,5 +11,6 @@
     <string name="email">EMAIL</string>
     <string name="enter_a_username">ENTER A USERNAME</string>
     <string name="done">DONE</string>
+    <string name="welcome_backbut">"Welcome back "</string>
 
 </resources>

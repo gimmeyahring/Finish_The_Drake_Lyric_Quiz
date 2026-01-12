@@ -6,6 +6,7 @@
     android:gravity="top"
     android:background="@color/white"
 
+
     xmlns:android="http://schemas.android.com/apk/res/android">
     <View
         android:layout_width="match_parent"
@@ -41,7 +42,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_gravity="center"
-        android:text="@string/done"
+        android:text="@string/start_button"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:backgroundTint="@color/purple"
         style="@style/SquareButton"

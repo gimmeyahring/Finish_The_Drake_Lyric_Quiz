@@ -6,7 +6,7 @@ public class Question {
     // instance variables
 
     public String questionText;
-    public String correctAnswer;
+    public int correctAnswer;
     public int songNumber;
 
 
@@ -14,14 +14,14 @@ public class Question {
 
     public Question(){
         questionText = "";
-        correctAnswer = "";
+        correctAnswer = 0;
         songNumber = 0;
 
 
 
     }
 
-    public Question(String qtf, String caf, int snf){
+    public Question(String qtf, int caf, int snf){
         questionText = qtf;
         correctAnswer = caf;
         songNumber = snf;
@@ -33,12 +33,12 @@ public class Question {
     // getters & setters
 
     public String getQuestionText(){return questionText;}
-    public String getCorrectAnswer(){return correctAnswer;}
+    public int getCorrectAnswer(){return correctAnswer;}
     public int getSongNumber(){return songNumber;}
 
 
     public void setQuestionText(String newQuestionText){questionText = newQuestionText;}
-    public void setCorrectAnswer(String newCorrectAnswer){correctAnswer = newCorrectAnswer;}
+    public void setCorrectAnswer(int newCorrectAnswer){correctAnswer = newCorrectAnswer;}
     public void setSongNumber(int newSongNumber){songNumber = newSongNumber;}
 
     // methods
