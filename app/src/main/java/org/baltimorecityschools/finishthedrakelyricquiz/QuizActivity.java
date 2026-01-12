@@ -80,17 +80,16 @@ public class QuizActivity extends AppCompatActivity {
                 R.raw.pbmmanofsteel, R.raw.kanywestiwonder, R.raw.savagealot, R.raw.laufeyfromthestart };
         score = 0;
         currentIndex = 0;
-        q0 = new Question("I want you to be mine again baby", 0, 0);
-        q1 = new Question("Asking me how did it feel", 3, 1);
-        q2 = new Question("And we can hear the angels calling us", 3, 2);
-        q3 = new Question("Always been a lil mathematician", 1, 3);
-        q4 = new Question("Put the money in the bag", 2, 4);
-        q5 = new Question("OT OT theres never much love when we go OT", 0, 5);
-        q6 = new Question("I got chrome on my body", 0, 6);
-        q7 = new Question("And Im back on my grind", 3, 7);
-        q8 = new Question("How many faking they streams", 1, 8);
-        q9 = new Question("Dont you notice how I get quiet when theres no one else around"
-                , 2, 9);
+        q0 = new Question("I want you to be mine again baby", 0, 0,"I know my lifestyle is driving you crazy", "I know the distance is driving you crazy", "I cannot see myself without you", "I know these wild nights is driving you crazy");
+        q1 = new Question("Asking me how did it feel", 3, 1, "Won't pretend it didn't cut deep", "Won't say it didn't enlighten me", "Won't say it didn't scare me", "Look at the levels I’m reachin’");
+        q2 = new Question("And we can hear the angels calling us", 3, 2, "And when im in that thang", "Doing a cuk in my latest drop", "And we can feel the magic between us", "And we can see the sunrise before us");
+        q3 = new Question("Always been a lil mathematician", 1, 3, "Lately this bag I'm gettin'", "Lately this cash I'm gettin'", "Got me losin' count of this bag", "Look at the level I’m reachin’");
+        q4 = new Question("Put the money in the bag", 2, 4, "Oops I just got them racks", "She said you not funny son", "Oops I just got a bag", "This the sound of a bag");
+        q5 = new Question("OT OT theres never much love when we go OT", 0, 5, "I pray to make it back in one piece", "I pray, I pray", "That's why I need a one dance", "Got a Hennessy in my hand");
+        q6 = new Question("You ain't catch that, I can't pass this", 0, 6, "Shooter stay strapped, I don't need mine", "Bro put belt right to they behind", "The way that switch brrt", "6-7");
+        q7 = new Question("And Im back on my grind", 3, 7, "Seven-0-clock that's primetime", "A psychic read my lifetime", "I knew this moment would come, now it's my time", "A psychic read my lifeline");
+        q8 = new Question("How many faking they streams", 1, 8, "Getting they plays from botting", "Getting they plays from machines", "Who the people really rooting for", "Selling they soul to machines");
+        q9 = new Question("Dont you notice how I get quiet when theres no one else around", 2, 9, "Me and you and endless silence", "Run to me, confess your love, at least just let me say", "Me and you and awkward silence", "");
         questions = new Question[]{q0, q1, q2, q3, q4, q5, q6, q7, q8, q9};
         currentQuestion = questions[currentIndex];
 

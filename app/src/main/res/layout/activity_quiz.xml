@@ -77,7 +77,7 @@
             android:id="@+id/radioOption1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="'I know my lifestyle is driving you crazy'"
+            android:text="I know my lifestyle is driving you crazy"
             android:checked="true"
             android:textSize="20sp"/> <!-- Optionally set one as default -->
 
@@ -86,7 +86,7 @@
             android:id="@+id/radioOption2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="'I know the distance is driving you crazy'"
+            android:text="I know the distance is driving you crazy"
             android:textSize="20sp"/>
 
         <!-- Radio Button 3 -->
@@ -94,14 +94,14 @@
             android:id="@+id/radioOption3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="'I know my habits are hurting you mental'"
+            android:text="I know my habits are hurting you mental"
             android:textSize="20sp"/>
 
         <RadioButton
             android:id="@+id/radioOption4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="'I know my wild nights is driving you crazy'"
+            android:text="I know these wild nights is driving you crazy"
             android:textSize="20sp"/>
 
     </RadioGroup>
