@@ -159,16 +159,13 @@ public class QuizActivity extends AppCompatActivity {
                 }
                 else
                 {
-
-
-
-
-
                     currentIndex++;
                     currentQuestion = questions[currentIndex];
                     questionTV.setText(currentQuestion.getQuestionText());
-
-
+                    radioOption0.setText(currentQuestion.getOption1());
+                    radioOption1.setText(currentQuestion.getOption2());
+                    radioOption2.setText(currentQuestion.getOption3());
+                    radioOption3.setText(currentQuestion.getOption4());
                 }
 
             }
