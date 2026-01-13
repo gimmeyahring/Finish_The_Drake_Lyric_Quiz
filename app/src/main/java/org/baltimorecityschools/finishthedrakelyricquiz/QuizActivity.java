@@ -89,7 +89,7 @@ public class QuizActivity extends AppCompatActivity {
         q6 = new Question("You ain't catch that, I can't pass this", 0, 6, "Shooter stay strapped, I don't need mine", "Bro put belt right to they behind", "The way that switch brrt", "6-7");
         q7 = new Question("And Im back on my grind", 3, 7, "Seven-0-clock that's primetime", "A psychic read my lifetime", "I knew this moment would come, now it's my time", "A psychic read my lifeline");
         q8 = new Question("How many faking they streams", 1, 8, "Getting they plays from botting", "Getting they plays from machines", "Who the people really rooting for", "Selling they soul to machines");
-        q9 = new Question("Dont you notice how I get quiet when theres no one else around", 2, 9, "Me and you and endless silence", "Run to me, confess your love, at least just let me say", "Me and you and awkward silence", "");
+        q9 = new Question("Dont you notice how I get quiet when theres no one else around", 2, 9, "Me and you and endless silence", "Run to me, confess your love, at least just let me say", "Me and you and awkward silence", "Me and you and total madness");
         questions = new Question[]{q0, q1, q2, q3, q4, q5, q6, q7, q8, q9};
         currentQuestion = questions[currentIndex];
 
@@ -167,6 +167,8 @@ public class QuizActivity extends AppCompatActivity {
                     radioOption2.setText(currentQuestion.getOption3());
                     radioOption3.setText(currentQuestion.getOption4());
                     doneBTN.setVisibility(View.VISIBLE);
+                    radioGroupOptions.clearCheck();
+
                 }
 
             }

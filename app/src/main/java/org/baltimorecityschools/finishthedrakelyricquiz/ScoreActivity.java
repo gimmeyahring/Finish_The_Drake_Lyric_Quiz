@@ -13,7 +13,10 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ScoreActivity extends AppCompatActivity {
     int score;
     TextView scoreNumber;
-    Button emailBTN;
+    Button emailBTN, leaderboardBTN, restartBTN;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +27,23 @@ public class ScoreActivity extends AppCompatActivity {
         scoreNumber = (TextView) findViewById(R.id.scoreNumber);
         scoreNumber.setText(String.valueOf(score));
         emailBTN = (Button) findViewById(R.id.emailButton);
+        leaderboardBTN = (Button) findViewById(R.id.leaderboardButton);
+        restartBTN = (Button) findViewById(R.id.restartButton);
+
 
         emailBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                composeEmail("I scored a " + score + "in the 'Finish The Lyric' app",
+                composeEmail("I scored a " + score + " in the 'Finish The Lyric' app",
                         "Finish The Lyric App Score");
+            }
+        });
+
+        restartBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ScoreActivity.this, StartActivity.class);
+                startActivity(intent);
             }
         });
 
