@@ -18,14 +18,14 @@ public class StartActivity extends AppCompatActivity {
 
 
     SharedPreferences openPreference;
-    final  String sharedPreferencesFile = "org.baltimorecityschools.donavansharepreferences.sp";
+    public static final  String sharedPreferencesFile = "org.baltimorecityschools.donavansharepreferences.sp";
     final String FIRST_OPEN_KEY = "FIRSTOPEN";
     final String USERNAME_KEY = "USERNAME";
 
     Button doneBTN;
     EditText enterUsername;
     TextView usernameTV;
-    public String username;
+    String username;
     SharedPreferences.Editor editor;
 
 
@@ -43,15 +43,14 @@ public class StartActivity extends AppCompatActivity {
         enterUsername = (EditText) findViewById(R.id.setUsername);
         doneBTN = (Button) findViewById(R.id.donebut);
         usernameTV = findViewById(R.id.usernametextview);
-        username = "User";
+
         openPreference = getSharedPreferences(sharedPreferencesFile, MODE_PRIVATE);
         editor = openPreference.edit();
 
 
         if (openPreference.getBoolean(FIRST_OPEN_KEY, true)){
             enterUsername.setVisibility(View.VISIBLE);
-            editor.putBoolean(FIRST_OPEN_KEY, false);
-            editor.apply();
+
 
 
         }
@@ -68,15 +67,27 @@ public class StartActivity extends AppCompatActivity {
         doneBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                username = enterUsername.getText().toString();
-                if (username.length() > 13) {
-                    Toast.makeText(StartActivity.this, "Username cant exceed 13 characters", Toast.LENGTH_LONG).show();
-                    username = "";
-                    enterUsername.setText(username);
-                } else {
+                if (openPreference.getBoolean(FIRST_OPEN_KEY, true)) {
                     username = enterUsername.getText().toString();
-                    editor.putString(USERNAME_KEY, username);
-                    editor.apply();
+                    if (username.length() > 13) {
+
+                        Toast.makeText(StartActivity.this, "Username cant exceed 13 characters", Toast.LENGTH_LONG).show();
+                        username = "";
+                        enterUsername.setText(username);
+                    } else {
+
+                        editor.putBoolean(FIRST_OPEN_KEY, false);
+                        editor.apply();
+                        editor.putString(USERNAME_KEY, username);
+                        editor.apply();
+                        Intent leaveIntent;
+                        leaveIntent = new Intent(StartActivity.this, QuizActivity.class);
+
+                        startActivity(leaveIntent);
+                    }
+                }
+                else {
+
                     Intent leaveIntent;
                     leaveIntent = new Intent(StartActivity.this, QuizActivity.class);
 
